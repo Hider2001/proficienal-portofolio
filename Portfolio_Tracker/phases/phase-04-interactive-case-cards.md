@@ -1,7 +1,7 @@
 # Phase 04: Interactive Case Cards UX Design
 
 **Status:** ⬜ Not Started  
-**Progress:** 0/5 Tasks  
+**Progress:** 0/6 Tasks  
 **Assignee:** _________________  
 **Target Completion:** _________________
 
@@ -9,7 +9,7 @@
 
 ## Phase Overview
 
-Designs the core portfolio showcase element—case cards that are micro-experiences, not static displays. Each card invites exploration through hover states, expansion behaviors, and responsive layouts.
+Designs the core portfolio showcase element—case cards that work flawlessly in both **LTR and RTL layouts** with mirrored interactions.
 
 ---
 
@@ -19,9 +19,10 @@ Designs the core portfolio showcase element—case cards that are micro-experien
 |---|--------|-----------|
 | 1 | ⬜ | Design Card Hover States |
 | 2 | ⬜ | Plan Card Expansion Behavior |
-| 3 | ⬜ | Define Card Content Layers |
-| 4 | ⬜ | Design Card Grid Responsiveness |
+| 3 | ⬜ | Define Card Content Layers (EN/AR) |
+| 4 | ⬜ | Design Card Grid Responsiveness (RTL) |
 | 5 | ⬜ | Create Card Interaction Feedback |
+| 6 | ⬜ | Design Bilingual Card Content Layout |
 
 **Legend:** ⬜ Not Started | 🔄 In Progress | ✅ Complete | ⏸️ Blocked
 
@@ -53,25 +54,25 @@ Designs the core portfolio showcase element—case cards that are micro-experien
 
 ---
 
-### Task 3: Define Card Content Layers
+### Task 3: Define Card Content Layers (EN/AR)
 
 | Property | Details |
 |----------|---------|
-| **UX / Product Purpose** | Balances visual appeal with information density |
-| **Technical Notes** | Conditional rendering based on interaction state |
-| **Definition of Done** | 3-layer content hierarchy (default/hover/expanded) |
+| **UX / Product Purpose** | Balances visual appeal with information density in both languages |
+| **Technical Notes** | Arabic text may be longer/shorter—plan for variance |
+| **Definition of Done** | 3-layer hierarchy with EN/AR text length considerations |
 | **Status** | ⬜ Not Started |
 | **Notes** | |
 
 ---
 
-### Task 4: Design Card Grid Responsiveness
+### Task 4: Design Card Grid Responsiveness (RTL)
 
 | Property | Details |
 |----------|---------|
-| **UX / Product Purpose** | Ensures premium feel across all devices |
-| **Technical Notes** | CSS Grid with Tailwind breakpoints |
-| **Definition of Done** | Responsive grid specs: 1/2/3 columns with breakpoints |
+| **UX / Product Purpose** | Grid flows naturally from right in Arabic mode |
+| **Technical Notes** | CSS Grid with `direction: rtl`, Tailwind RTL plugin |
+| **Definition of Done** | Responsive grid specs with RTL flow validation |
 | **Status** | ⬜ Not Started |
 | **Notes** | |
 
@@ -89,13 +90,26 @@ Designs the core portfolio showcase element—case cards that are micro-experien
 
 ---
 
+### Task 6: Design Bilingual Card Content Layout
+
+| Property | Details |
+|----------|---------|
+| **UX / Product Purpose** | Text alignment, icons, badges work in both directions |
+| **Technical Notes** | Logical properties, icon mirroring decisions |
+| **Definition of Done** | Card mockups in both EN and AR with alignment specs |
+| **Status** | ⬜ Not Started |
+| **Notes** | |
+
+---
+
 ## Phase Deliverables Checklist
 
-- [ ] Hover state mockups with CSS values
+- [ ] Hover state mockups
 - [ ] Card expansion interaction flow
-- [ ] 3-layer content hierarchy spec
-- [ ] Responsive grid breakpoint document
-- [ ] Interaction feedback animation library
+- [ ] Content hierarchy spec (EN/AR)
+- [ ] Responsive grid (RTL validation)
+- [ ] Interaction feedback library
+- [ ] Bilingual card layout mockups
 
 ---
 

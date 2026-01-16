@@ -1,7 +1,7 @@
 # Phase 03: Progressive Reveal UX Planning
 
 **Status:** ⬜ Not Started  
-**Progress:** 0/5 Tasks  
+**Progress:** 0/6 Tasks  
 **Assignee:** _________________  
 **Target Completion:** _________________
 
@@ -9,7 +9,7 @@
 
 ## Phase Overview
 
-Designs how content unfolds through scroll and interaction. Creates a cinematic, guided experience that maintains user engagement and perceived performance.
+Designs how content unfolds through scroll and interaction. Creates a cinematic experience that maintains engagement with **RTL-aware animation directions**.
 
 ---
 
@@ -17,11 +17,12 @@ Designs how content unfolds through scroll and interaction. Creates a cinematic,
 
 | # | Status | Task Name |
 |---|--------|-----------|
-| 1 | ⬜ | Design Scroll-Triggered Reveal Sequences |
+| 1 | ⬜ | Design Scroll-Triggered Reveal Sequences (RTL-Aware) |
 | 2 | ⬜ | Define Content Loading States |
 | 3 | ⬜ | Plan Section Transition Choreography |
 | 4 | ⬜ | Design Progressive Image Loading |
-| 5 | ⬜ | Create Scroll Progress Indicators |
+| 5 | ⬜ | Create Scroll Progress Indicators (RTL) |
+| 6 | ⬜ | Plan Direction-Aware Animations |
 
 **Legend:** ⬜ Not Started | 🔄 In Progress | ✅ Complete | ⏸️ Blocked
 
@@ -29,13 +30,13 @@ Designs how content unfolds through scroll and interaction. Creates a cinematic,
 
 ## Task Details
 
-### Task 1: Design Scroll-Triggered Reveal Sequences
+### Task 1: Design Scroll-Triggered Reveal Sequences (RTL-Aware)
 
 | Property | Details |
 |----------|---------|
-| **UX / Product Purpose** | Creates cinematic, guided experience |
-| **Technical Notes** | Framer Motion `useInView`, intersection observers |
-| **Definition of Done** | Storyboard: what reveals when, with timing specs |
+| **UX / Product Purpose** | Creates cinematic, guided experience in both reading directions |
+| **Technical Notes** | Framer Motion with direction context; slides from right in RTL |
+| **Definition of Done** | Storyboard with LTR and RTL animation variants |
 | **Status** | ⬜ Not Started |
 | **Notes** | |
 
@@ -71,19 +72,31 @@ Designs how content unfolds through scroll and interaction. Creates a cinematic,
 |----------|---------|
 | **UX / Product Purpose** | Prevents content jumping, improves LCP |
 | **Technical Notes** | Blur-up placeholders, `loading="lazy"` |
-| **Definition of Done** | Image loading strategy document with format decisions |
+| **Definition of Done** | Image loading strategy with format decisions |
 | **Status** | ⬜ Not Started |
 | **Notes** | |
 
 ---
 
-### Task 5: Create Scroll Progress Indicators
+### Task 5: Create Scroll Progress Indicators (RTL)
 
 | Property | Details |
 |----------|---------|
-| **UX / Product Purpose** | Provides orientation within long pages |
-| **Technical Notes** | Custom hook for scroll position, CSS-based indicator |
-| **Definition of Done** | Progress indicator design + implementation spec |
+| **UX / Product Purpose** | Provides orientation; must read correctly in RTL |
+| **Technical Notes** | Progress bar fills from right in RTL mode |
+| **Definition of Done** | Progress indicator spec with RTL variant |
+| **Status** | ⬜ Not Started |
+| **Notes** | |
+
+---
+
+### Task 6: Plan Direction-Aware Animations
+
+| Property | Details |
+|----------|---------|
+| **UX / Product Purpose** | Animations feel natural in both LTR and RTL |
+| **Technical Notes** | Use `dir` attribute, CSS logical properties, Framer context |
+| **Definition of Done** | Animation direction strategy document |
 | **Status** | ⬜ Not Started |
 | **Notes** | |
 
@@ -91,11 +104,12 @@ Designs how content unfolds through scroll and interaction. Creates a cinematic,
 
 ## Phase Deliverables Checklist
 
-- [ ] Scroll reveal storyboard with timing specs
+- [ ] Scroll reveal storyboard (LTR + RTL)
 - [ ] Skeleton component designs
 - [ ] Transition timing matrix
-- [ ] Image loading strategy document
-- [ ] Progress indicator design spec
+- [ ] Image loading strategy
+- [ ] Progress indicator (RTL-aware)
+- [ ] Direction-aware animation spec
 
 ---
 

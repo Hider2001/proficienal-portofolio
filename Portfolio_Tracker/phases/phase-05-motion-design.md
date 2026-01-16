@@ -1,7 +1,7 @@
 # Phase 05: Subtle Motion & Micro-Interaction Design
 
 **Status:** ⬜ Not Started  
-**Progress:** 0/5 Tasks  
+**Progress:** 0/6 Tasks  
 **Assignee:** _________________  
 **Target Completion:** _________________
 
@@ -9,7 +9,7 @@
 
 ## Phase Overview
 
-Establishes the motion design system for the portfolio. Defines principles, button interactions, loading animations, and accessibility fallbacks to create a refined, premium feel without gimmicks.
+Establishes the motion design system with **direction-aware animations** that feel natural in both LTR (English) and RTL (Arabic) modes.
 
 ---
 
@@ -17,11 +17,12 @@ Establishes the motion design system for the portfolio. Defines principles, butt
 
 | # | Status | Task Name |
 |---|--------|-----------|
-| 1 | ⬜ | Define Motion Principles |
+| 1 | ⬜ | Define Motion Principles (Direction-Aware) |
 | 2 | ⬜ | Design Button & Link Micro-Interactions |
 | 3 | ⬜ | Create Loading & Success Animations |
 | 4 | ⬜ | Design Cursor & Pointer Effects |
 | 5 | ⬜ | Plan Reduced Motion Fallbacks |
+| 6 | ⬜ | Create RTL Animation Variants |
 
 **Legend:** ⬜ Not Started | 🔄 In Progress | ✅ Complete | ⏸️ Blocked
 
@@ -29,13 +30,13 @@ Establishes the motion design system for the portfolio. Defines principles, butt
 
 ## Task Details
 
-### Task 1: Define Motion Principles
+### Task 1: Define Motion Principles (Direction-Aware)
 
 | Property | Details |
 |----------|---------|
-| **UX / Product Purpose** | Ensures consistency—no random animations |
-| **Technical Notes** | Framer Motion variants, spring configs |
-| **Definition of Done** | Motion design system: easing curves, duration scales |
+| **UX / Product Purpose** | Ensures consistency—animations respect reading direction |
+| **Technical Notes** | Framer Motion variants with direction context |
+| **Definition of Done** | Motion system with LTR/RTL easing and direction rules |
 | **Status** | ⬜ Not Started |
 | **Notes** | |
 
@@ -71,7 +72,7 @@ Establishes the motion design system for the portfolio. Defines principles, butt
 |----------|---------|
 | **UX / Product Purpose** | Adds polish for desktop users |
 | **Technical Notes** | CSS custom cursors, pointer-following elements |
-| **Definition of Done** | Cursor enhancement spec (optional, graceful degradation) |
+| **Definition of Done** | Cursor enhancement spec (graceful degradation) |
 | **Status** | ⬜ Not Started |
 | **Notes** | |
 
@@ -89,13 +90,26 @@ Establishes the motion design system for the portfolio. Defines principles, butt
 
 ---
 
+### Task 6: Create RTL Animation Variants
+
+| Property | Details |
+|----------|---------|
+| **UX / Product Purpose** | Slide-in from correct side, respect reading flow |
+| **Technical Notes** | Context-based variants: `slideInStart` vs `slideInLeft` |
+| **Definition of Done** | Complete RTL variant library for all animations |
+| **Status** | ⬜ Not Started |
+| **Notes** | |
+
+---
+
 ## Phase Deliverables Checklist
 
-- [ ] Motion design system document
+- [ ] Motion design system (LTR/RTL)
 - [ ] Button/link interaction specs
-- [ ] Loading & success animation assets
+- [ ] Loading & success animations
 - [ ] Cursor enhancement spec
-- [ ] Reduced motion fallback matrix
+- [ ] Reduced motion fallbacks
+- [ ] RTL animation variant library
 
 ---
 
