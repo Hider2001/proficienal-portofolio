@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حمزة فؤاد حاجب - السيرة الذاتية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #FFFFFF;
+            color: #1E293B;
+            line-height: 1.6;
+            font-weight: 400;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: #FFFFFF;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #0A2540;
+            color: #FFFFFF;
+            padding: 40px 50px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .header h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #38BDF8;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item i {
+            color: #38BDF8;
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 40px 50px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0A2540;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #38BDF8;
+        }
+
+        .summary-text {
+            text-align: justify;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0A2540;
+            margin-bottom: 5px;
+        }
+
+        .company-info {
+            font-size: 15px;
+            color: #38BDF8;
+            margin-bottom: 3px;
+            font-weight: 500;
+        }
+
+        .date-range {
+            font-size: 14px;
+            color: #1E293B;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .date-range i {
+            color: #38BDF8;
+        }
+
+        .responsibilities {
+            list-style: none;
+            padding-right: 0;
+        }
+
+        .responsibilities li {
+            padding-right: 25px;
+            position: relative;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .responsibilities li:before {
+            content: "◂";
+            color: #38BDF8;
+            font-weight: 700;
+            position: absolute;
+            right: 0;
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-size: 17px;
+            font-weight: 600;
+            color: #0A2540;
+        }
+
+        .university {
+            color: #38BDF8;
+            font-weight: 500;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .skill-category h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0A2540;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-category h3 i {
+            color: #38BDF8;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding-right: 0;
+        }
+
+        .skill-list li {
+            padding: 6px 0;
+            padding-right: 20px;
+            position: relative;
+            font-weight: 400;
+        }
+
+        .skill-list li:before {
+            content: "•";
+            color: #38BDF8;
+            font-weight: 700;
+            position: absolute;
+            right: 0;
+            font-size: 18px;
+        }
+
+        .professional-skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .professional-skills li {
+            background-color: #CBD5E1;
+            padding: 10px 15px;
+            border-radius: 6px;
+            list-style: none;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .language-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .language-item i {
+            color: #38BDF8;
+            font-size: 20px;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #0A2540;
+        }
+
+        .language-level {
+            color: #1E293B;
+            font-weight: 400;
+        }
+
+        .additional-info {
+            list-style: none;
+            padding-right: 0;
+        }
+
+        .additional-info li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            padding-right: 25px;
+            position: relative;
+        }
+
+        .additional-info li:before {
+            content: "✓";
+            color: #38BDF8;
+            font-weight: 700;
+            position: absolute;
+            right: 0;
+        }
+
+        .download-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: #38BDF8;
+            color: #FFFFFF;
+            padding: 15px 30px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .download-btn:hover {
+            background-color: #0A2540;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .download-btn {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid,
+            .professional-skills,
+            .languages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header,
+            .content {
+                padding: 30px 25px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>حمزة فؤاد حاجب</h1>
+            <h2>مطور ويب وبرمجيات</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>صنعاء، اليمن</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>hamzafuad2001@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>776645280 967+</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>739502156 967+</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>خبرة +1.5 سنة</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>متاح للعمل عن بُعد</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <span>25 سنة</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">الملخص المهني</h2>
+                <p class="summary-text">
+                    مطور ويب وبرمجيات موجه نحو النتائج مع أكثر من 1.5 سنة من الخبرة المهنية في شركة تطوير البرمجيات. متمكن من بناء تطبيقات الويب ولوحات المعلومات وأنظمة الأعمال مع التركيز القوي على الكود النظيف وقابلية التوسع وتجربة المستخدم. خبرة في العمل مع قواعد بيانات SQL Server وإنشاء التقارير والعروض والمنطق التجاري والتعاون باستخدام Git و GitHub. شغوف بالتعلم المستمر وحل المشكلات وتقديم حلول موثوقة في بيئات العمل عن بُعد.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">الخبرة العملية</h2>
+                <div class="job-title">مطور ويب وبرمجيات</div>
+                <div class="company-info">بيان سوفت – صنعاء، اليمن</div>
+                <div class="date-range">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>07/2024 – حتى الآن</span>
+                </div>
+                <ul class="responsibilities">
+                    <li>تطوير وصيانة الأنظمة المستندة إلى الويب وتطبيقات الأعمال الداخلية</li>
+                    <li>العمل بشكل مكثف مع SQL Server لإنشاء وتحسين العروض والدوال والتقارير</li>
+                   <!-- <li>بناء لوحات معلومات إدارية وواجهات تقارير للاستخدام الإداري</li>
+                     <li>دمج الأنظمة مع قواعد بيانات تخطيط موارد المؤسسات والمحاسبة الحالية دون الوصول المباشر إلى الكود المصدري الأساسي</li> -->
+                    <li>المساعدة في تحليل البيانات والأتمتة لتقليل العمل اليدوي</li>
+                    <li>التعاون مع أعضاء الفريق باستخدام Git و GitHub للتحكم في الإصدار</li>
+                    <li>المشاركة في تصحيح الأخطاء والتحسين وتحسين استقرار النظام</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">التعليم</h2>
+                <div class="education-item">
+                    <div class="degree">درجة البكالوريوس</div>
+                    <div class="university">جامعة الأندلس – صنعاء، اليمن</div>
+                </div>
+            </div>
+</br>
+</br>
+            <div class="section">
+                <h2 class="section-title">المهارات التقنية</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-code"></i> البرمجة والتطوير</h3>
+                        <ul class="skill-list">
+                            <li>HTML5, CSS3, JavaScript</li>
+                            <li>React.js</li>
+                            <li>Node.js (مستوى مبتدئ إلى متوسط)</li>
+                            <li>PHP</li>
+                            <li>C#</li>
+                            <li>Flutter (تطبيقات متعددة المنصات)</li>
+                            <li>Electron (تطبيقات سطح المكتب)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-database"></i> قواعد البيانات</h3>
+                        <ul class="skill-list">
+                            <li>SQL Server</li>
+                            <li>MySQL</li>
+                            <li>SQLite</li>
+                            <li>Firebase</li>
+                            <li>كتابة الاستعلامات المحسّنة</li>
+                            <li>العروض والدوال</li>
+                            <li>التقارير وتحليل البيانات</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-toolbox"></i> الأدوات والتقنيات</h3>
+                        <ul class="skill-list">
+                            <li>Git & GitHub</li>
+                            <li>VS Code</li>
+                            <li>Cursor Editor</li>
+                            <li>أدوات التطوير بمساعدة الذكاء الاصطناعي</li>
+                            <li>Excel (صيغ وأتمتة متقدمة)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">المهارات المهنية</h2>
+                <ul class="professional-skills">
+                    <li>حل المشكلات والتفكير المنطقي</li>
+                    <li>الكود النظيف والتطوير المنظم</li>
+                    <li>التعلم السريع والتطوير الذاتي</li>
+                    <li>العمل المستقل (جاهز للعمل عن بُعد)</li>
+                    <li>التفكير الموجه نحو الأعمال</li>
+                    <li>إدارة الوقت وتحديد أولويات المهام</li>
+                    <li>التواصل والتعاون الجماعي</li>
+                    <li>القدرة على التعديل والإضافة على برامج Open Source</li>
+                </ul>
+            </div>
+</br>
+</br>
+</br>
+            <div class="section">
+                <h2 class="section-title">اللغات</h2>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <i class="fa-solid fa-language"></i>
+                        <div>
+                            <div class="language-name">العربية</div>
+                            <div class="language-level">اللغة الأم</div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <i class="fa-solid fa-language"></i>
+                        <div>
+                            <div class="language-name">الإنجليزية</div>
+                            <div class="language-level">جيد (القراءة، الكتابة، التواصل التقني)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">معلومات إضافية</h2>
+                <ul class="additional-info">
+                    <li>خبرة في بناء أنظمة التقارير على قواعد البيانات الموجودة</li>
+                    <li>مرتاح في العمل تحت موارد محدودة وجداول زمنية ضيقة</li>
+                    <li>اهتمام قوي بسير عمل التطوير بمساعدة الذكاء الاصطناعي</li>
+                    <li>تحسين المهارات بنشاط للوصول إلى مستوى مطور ويب أول</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- <button class="download-btn" onclick="downloadPDF()">
+        <i class="fa-solid fa-download"></i>
+        تحميل كملف PDF
+    </button> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const element = document.querySelector('.container');
+            const button = document.querySelector('.download-btn');
+            
+            // Hide button before generating PDF
+            button.style.display = 'none';
+            
+            const opt = {
+                margin: 0,
+                filename: 'حمزة_فؤاد_حاجب_السيرة_الذاتية.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Show button again after PDF is generated
+                button.style.display = 'flex';
+            });
+        }
+    </script>
+</body>
+</html>
