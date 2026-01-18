@@ -1,13 +1,17 @@
-import { useState, FormEvent } from 'react';
+/**
+ * Contact Section Component
+ * Uses useContactForm hook for clean separation
+ */
+
+import { useState, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { RevealOnScroll } from '../ui/RevealOnScroll';
-
-type FormStatus = 'idle' | 'loading' | 'success' | 'error';
+import { useContactForm } from '@/hooks';
 
 export const Contact = () => {
-    const { t, i18n } = useTranslation();
-    const [status, setStatus] = useState<FormStatus>('idle');
+    const { t } = useTranslation();
+    const { submit, status } = useContactForm();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -16,23 +20,11 @@ export const Contact = () => {
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        setStatus('loading');
+        await submit(formData);
 
-        try {
-            // Simulate API call - replace with actual Supabase/API call
-            await new Promise((resolve) => setTimeout(resolve, 1500));
-
-            // In production, send to backend:
-            // await fetch('/api/contact', {
-            //   method: 'POST',
-            //   headers: { 'Content-Type': 'application/json' },
-            //   body: JSON.stringify({ ...formData, language: i18n.language }),
-            // });
-
-            setStatus('success');
+        // Clear form on success
+        if (status !== 'error') {
             setFormData({ name: '', email: '', message: '' });
-        } catch {
-            setStatus('error');
         }
     };
 
