@@ -15,5 +15,5 @@ export default defineConfig({
       '@locales': path.resolve(__dirname, './src/locales'),
     },
   },
-  base: '/', // Change for GitHub Pages: '/portfolio/'
+  base: '/HamzaHajib/', // GitHub Pages base path
 })
